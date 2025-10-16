@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const SortableTable = () => {
-  // Step 1: Define the employee data
+  // Step 1: Employee data array
   const employees = [
     { name: "Alice Johnson", department: "Engineering", salary: 80000 },
     { name: "Bob Smith", department: "Sales", salary: 65000 },
@@ -10,15 +10,15 @@ const SortableTable = () => {
     { name: "Ethan Brown", department: "Engineering", salary: 90000 },
   ];
 
-  // Step 2: State to manage sorted data and sort configuration
+  // Step 2: State for sorted data & sorting configuration
   const [sortedData, setSortedData] = useState(employees);
   const [sortConfig, setSortConfig] = useState({ key: null, direction: "asc" });
 
-  // Step 3: Function to handle sorting
+  // Step 3: Sorting function
   const handleSort = (key) => {
     let direction = "asc";
 
-    // Toggle direction if same column clicked twice
+    // Toggle direction when clicking the same header twice
     if (sortConfig.key === key && sortConfig.direction === "asc") {
       direction = "desc";
     }
@@ -91,5 +91,4 @@ const SortableTable = () => {
 
 export default SortableTable;
 
-            
-    
+           
