@@ -10,15 +10,15 @@ const SortableTable = () => {
     { name: "Ethan Brown", department: "Engineering", salary: 90000 },
   ];
 
-  // Step 2: State for sorted data & sorting configuration
+ 
   const [sortedData, setSortedData] = useState(employees);
   const [sortConfig, setSortConfig] = useState({ key: null, direction: "asc" });
 
-  // Step 3: Sorting function
+ 
   const handleSort = (key) => {
     let direction = "asc";
 
-    // Toggle direction when clicking the same header twice
+    
     if (sortConfig.key === key && sortConfig.direction === "asc") {
       direction = "desc";
     }
@@ -33,7 +33,7 @@ const SortableTable = () => {
     setSortConfig({ key, direction });
   };
 
-  // Step 4: Render the table
+ 
   return (
     <div className="p-6 flex flex-col items-center">
       <h2 className="text-2xl font-bold mb-4 text-gray-800">
